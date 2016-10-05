@@ -1,0 +1,60 @@
+<!doctype html>
+<html ng-app="chat">
+
+<head>
+    <meta charset="UTF-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/custom.css">
+</head>
+
+<body ng-controller="appController">
+    <div class="nick-window" ng-if="showModal">
+        <div class="actions">
+            <label>nick:</label> <input type="text" ng-model="nick" ng-change="onNick(nick)" class="input" />
+            <button class="btn btn-primary" ng-disabled="isNickEmpty" ng-click="startChat()">start</button>
+        </div>
+    </div>
+    <div class="container">
+
+        <div class="left-side">
+
+            <div class="chat-list">
+                <div class="top-frame"><small class="logo">:) SMILE </small></div>
+                <div class="chat-items"></div>
+
+                <div class="bottom-frame actions" style="position:absolute;bottom:0px;width:100%;">
+                </div>
+
+            </div>
+        </div>
+        <div class="right-side">
+
+            <div class="row">
+                <div class="col-md-9 col-md-offset-1">
+                    <div class="output-window">
+                        <div class="top-frame"><small class="logo">:) SMILE</small></div>
+                        <div id="output"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-9 col-md-offset-1">
+                    <textarea id="input" class="form-control" rows="5"></textarea>
+                    <div class="bottom-frame actions">
+                        <span style="float:left;"> <input id="onEnter" type="checkbox"/> <small class="label">send on enter (off)</small></span>
+                        <button id="send" class="btn btn-primary">send</button>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+</body>
+<script src="./lib/angular.min.js"></script>
+<script src="./lib/chat.js"></script>
+<script src="./app.js"></script>
+<script src="./lib/sprintchat.js"></script>
+
+</html>

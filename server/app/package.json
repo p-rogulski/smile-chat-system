@@ -1,0 +1,32 @@
+{
+  "name": "chat",
+  "version": "1.0.0",
+  "description": "websockets application",
+  "main": "index.js",
+  "scripts": {
+    "test": "undefine"
+  },
+  "repository": {
+    "type": "git",
+    "url": "undefine"
+  },
+  "keywords": [
+    "chat"
+  ],
+  "author": "Piotr Rogulski",
+  "license": "ISC",
+  "devDependencies": {
+    "express": "^4.13.4"
+  },
+  "dependencies": {
+    "bootstrap": "^3.3.6",
+    "dateformat": "^1.0.12",
+    "jQuery": "^1.7.4",
+    "mongoose": "^4.6.1",
+    "react": "^15.1.0",
+    "react-dom": "^15.1.0",
+    "shortid": "^2.2.6",
+    "ts-loader": "^0.8.2",
+    "websocket": "^1.0.23"
+  }
+}
